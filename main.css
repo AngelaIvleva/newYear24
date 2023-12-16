@@ -42,6 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: relative;
 }
 
@@ -72,6 +73,8 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
 }
 
 .info__card i {
@@ -92,14 +95,18 @@
     height: auto;
   }
 
+  .banner {
+    height: 50vh;
+  }
+
   .info {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .info__card_mobile {
+  /* .info__card {
     padding-left: 20px;
     padding-right: 20px;
-  }
+  } */
 
   .banner__title { /* теги h1*/
     font-size: 4rem;
@@ -124,10 +131,10 @@
     grid-template-columns: 1fr;
   }
 
-  .info__card_mobile {
+  /* .info__card {
     padding-left: 20px;
     padding-right: 20px;
-  }
+  } */
 
   .container {
     padding: 40px;
