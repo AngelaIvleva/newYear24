@@ -96,6 +96,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .info__card_mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .banner__title { /* теги h1*/
     font-size: 4rem;
   }
@@ -105,10 +110,6 @@
 
   .header {
     box-sizing: border-box;
-  }
-
-  .container {
-    padding: 40px;
   }
 
   .banner {
@@ -121,5 +122,14 @@
 
   .info {
     grid-template-columns: 1fr;
+  }
+
+  .info__card_mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    padding: 40px;
   }
 }
