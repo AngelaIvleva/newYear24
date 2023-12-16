@@ -1,0 +1,125 @@
+.page {
+  margin: 0; /* Браузер по умолчанию для тега body выставляет margin: 8px, поэтому это нужно обнулить */
+  font-family: sans-serif;
+}
+
+.href { /* теги a*/
+  color: inherit; /* наследуем цвет ссылок у родителя */
+  text-decoration: none; /* убираем подчеркивание у ссылок */
+}
+
+.banner__title { /* теги h1*/
+  margin: 0;
+/* ниже уже кастомные настройки */
+  z-index: 2;
+  color: #fff;
+  font-size: 5rem;
+}
+ /* Выше - базовый набор css- сброса */
+.header {
+  height: 100px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 2em;
+  margin-left: 30px;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.banner {
+  height: 80vh;
+  background: url(./img/first-block.jpg) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner::before {
+  content: ''; /* без этого все, что ниже работать не будет*/
+  background-color: #0004;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.info {
+  background-color: #222;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.info__card {
+  border: 0.5px solid;
+  color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__card i {
+  font-size: 2em;
+}
+
+.container {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  .container {
+    padding: 50px;
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner__title { /* теги h1*/
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 599px) {
+
+  .header {
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding: 40px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner__title { /* теги h1*/
+    font-size: 3rem;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
